@@ -4,10 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advanced HTML Megamind Pixel</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        ol{
+            list-style-type: square;
+            text-decoration: underline;
+            font-family: 'Times New Roman', Times, serif;    
+        }
+        h2,h3{
+            color: blue;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h2>Ordered List</h2>
-    <ol type="I">
+    <h2 style="text-align: center;">Ordered List</h2>
+    <ol  type="I">
         <li>First Item</li>
         <li>Second Item</li>
         <li>Third Item</li>
@@ -15,12 +31,12 @@
 
     <!-- External Image from Pexels -->
     <h2>External Image</h2>
-    <img src="https://images.pexels.com/photos/1234567/pexels-photo-1234567.jpeg" alt="Sample Image from Pexels" width="600">
+    <img src="https://images.pexels.com/photos/1234567/pexels-photo-1234567.jpeg" alt="Sample Image from Pexels" width="600" style="position: static; margin-left: ;">
 
     <!-- Table of Contacts -->
     <h2>Contacts Table</h2>
-    <table border="1">
-        <thead>
+    <table border="1" id="contacts-table">
+        <thead class="table-header">
             <tr>
                 <th>Name</th>
                 <th>Address</th>
@@ -28,26 +44,26 @@
                 <th>Email</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
+        <tbody class="table-body">
+            <tr class="table-row">
                 <td>John Doe</td>
                 <td>123 Main St</td>
                 <td>123-456-7890</td>
                 <td>john@example.com</td>
             </tr>
-            <tr>
+            <tr class="table-row">
                 <td>Jane Smith</td>
                 <td>456 Elm St</td>
                 <td>987-654-3210</td>
                 <td>jane@example.com</td>
             </tr>
-            <tr>
+            <tr class="table-row">
                 <td>Mike Johnson</td>
                 <td>789 Oak St</td>
                 <td>555-123-4567</td>
                 <td>mike@example.com</td>
             </tr>
-            <tr>
+            <tr class="table-row">
                 <td>Emily Davis</td>
                 <td>321 Pine St</td>
                 <td>444-555-6666</td>
@@ -64,7 +80,7 @@
 
     <!-- Registration Form -->
     <h2>Registration Form</h2>
-    <form action="#" method="post">
+    <form class="form" action="#" method="post" >
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
 
@@ -83,7 +99,7 @@
         <input type="radio" id="female" name="gender" value="female" required>
         <label for="female">Female</label><br><br>
 
-        <label for="country">Country:</label>
+        <label for="country" style="text-align: center;">Country:</label>
         <select id="country" name="country" required>
             <option value="">Select your country</option>
             <option value="usa">USA</option>
@@ -104,14 +120,14 @@
 
     <!-- Multimedia Elements -->
     <h2>Multimedia Elements</h2>
-    <h3>Audio</h3>
-    <audio controls>
+    <h3 >Audio</h3>
+    <audio controls class="audio">
         <source src="audio-file.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
     <h3>Video</h3>
-    <video width="600" controls>
+    <video width="600" controls class="video">
         <source src="video-file.mp4" type="video/mp4">
         Your browser does not support the video element.
     </video>
